@@ -18,7 +18,7 @@ body {
     justify-content: center
 }
 
-.container {;
+.container {
     width: 320px;
     height: 500px;
     background-color: var(--white);
