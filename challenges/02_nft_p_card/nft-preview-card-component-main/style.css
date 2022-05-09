@@ -1,0 +1,158 @@
+:root {
+    /*PRIMARY COLORS*/
+    --p-soft-blue: hsl(215, 51%, 70%);
+    --p-cyan: hsl(178, 100%, 50%);
+
+    /*NEUTRAL COLORS*/
+    --n-main-dark-blue: hsl(217, 54%, 11%); /*main BG*/
+    --n-card-dark-blue: hsl(216, 50%, 16%); /*dark BG*/
+    --n-line-dark-blue: hsl(215, 32%, 27%); /*line*/
+    --n-white: hsl(0, 0%, 100%); 
+
+    /*FONT SIZE*/
+    --sm: 16px;
+    --sd: 18px;
+    --xl: 20px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--n-main-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--sd);
+}
+
+.container {
+    width: 355px;
+    height: auto;
+    background-color: var(--n-card-dark-blue);
+    border-radius: 12px;
+    
+}
+
+.nft-box {
+    width: 305px;
+    height: 305px;
+    background: var(--p-cyan);
+    margin: 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+}
+.nft-box .view {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+.nft-box .nft {
+    width: 305px;
+    height: 305px;
+    object-fit: cover;
+    border-radius: 8px;
+    z-index: 1;
+}
+.nft-box:hover .nft {
+    opacity: 0.3;
+}
+.nft-box:hover .view {
+    opacity: 1;
+}
+
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 24px 0;
+    text-align: left;
+}
+.description a {
+    padding-bottom: 24px;
+    text-decoration: none;
+    color: var(--n-white);
+    font-size: var(--xl);
+    font-weight: 600;
+}
+.description a:hover {
+    color: var(--p-cyan);
+}
+.description p {
+    color: var(--p-soft-blue);
+    margin: 0;
+}
+
+.post {
+    margin: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--n-line-dark-blue);
+}
+.post ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.price {
+    display: flex;
+    align-content: center ;
+}
+.price h4{
+    color: var(--p-cyan);
+    font-weight: 600;
+    font-size: var(--sm);
+    padding-left: 8px;
+}
+.ethicon {
+    display: flex;
+    align-content: center;
+}
+.clock {
+    display: flex;
+    align-content: center;
+}
+.d-left {
+    display: flex;
+    align-content: center ;
+}
+.d-left p {
+    color: var(--p-soft-blue);
+    font-weight: 400;
+    font-size: var(--sm);
+    padding-left: 8px;
+}
+
+.credits {
+    margin: 24px;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    display: flex;
+    align-content: center;
+}
+.avatar img {
+    border-radius: 50%;
+    border: 1px solid var(--n-white);
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.credits p {
+    margin-left: 16px;
+    font-size: var(--sm);
+    color: var(--p-soft-blue);
+}
+.credits p > a {
+    text-decoration: none;
+    color: var(--n-white);
+}
+.credits p > a:hover {
+    color: var(--p-cyan);
+}
