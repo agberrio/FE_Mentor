@@ -24,8 +24,9 @@ body {
     background-color: var(--pale_blue);
     background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
+    background-size:contain;
     display: grid;
-    place-items: center;
+    place-content: center;
     font-size: var(--sd);
 }
 
@@ -38,6 +39,7 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-rows: auto;
+    place-content: center;
     place-items: center;
 }
 .hero {
@@ -129,4 +131,40 @@ body {
 }
 .cancel a:hover {
     color: var(--dark_blue);
+}
+
+@media (max-width: 480px) {
+
+    body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    /*background-repeat: no-repeat;
+    background-size:contain;*/
+    }
+    
+    .container {
+        width: 332px;
+        /*place-content: center;*/
+    }
+    .hero {
+        width: 332px;
+    }
+    .container .summary {
+        width: 284px;
+        margin: 48px 24px 24px;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+    .container .plan {
+        width: 284px;
+        height: 80px;
+        margin: 0 24px 24px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    .plan .term-price {
+        margin: 0 12px;
+    }
+    .pay {
+        width: 284px;
+    }
 }
